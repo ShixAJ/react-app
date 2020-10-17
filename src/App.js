@@ -15,6 +15,16 @@ class App extends Component {
     ],
   };
 
+  //you have to pass props to constructor and super if you want to use them in the constructor
+  constructor() {
+    super();
+    console.log("App - Constructor");
+  }
+
+  componentDidMount() {
+    console.log("App - Mounted");
+  }
+
   handleIncrement = (counter) => {
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
@@ -37,7 +47,7 @@ class App extends Component {
   };
 
   render() {
-    // function App()
+    console.log("App - Rendered");
     return (
       <React.Fragment>
         <NavBar
