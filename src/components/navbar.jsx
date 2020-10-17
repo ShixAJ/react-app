@@ -1,14 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 
-class NavBar extends Component {
-  state = {};
-  render() {
-    return (
-      <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">Navbar</span>
-      </nav>
-    );
-  }
-}
+//Stateless Functional Component... For props we pass props as a parameter
+//instead of using props and keep calling it we can use Object Destructuring to simplify things
+const NavBar = ({ totalCounters }) => {
+  return (
+    <nav className="navbar navbar-light bg-light">
+      <a className="navbar-brand" href="#">
+        Navbar{" "}
+        <span className="badge badge-pull badge-secondary">
+          {totalCounters}
+        </span>
+      </a>
+    </nav>
+  );
+};
 
 export default NavBar;
